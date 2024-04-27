@@ -1,6 +1,7 @@
+import 'package:devoir_final/models/person_dart.dart';
 import 'package:flutter/material.dart';
 class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+  const SecondPage({super.key, required Candidate person});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class SecondPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
-            Text('Politics',
+            Text('$person',
             style: TextStyle (
               fontSize: 14,
               color: Colors.teal,
