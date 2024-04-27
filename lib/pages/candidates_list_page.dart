@@ -53,7 +53,7 @@ class _CandidateListPageState extends State<CandidateListPage> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
                               child: Image.network(
-                                'https://guardian.ng/wp-content/uploads/2022/06/Adebayo-2.jpg',
+                                '${person.image}',
                                 width: 100.0,
                                 height: 100.0,
                                 fit: BoxFit.cover,

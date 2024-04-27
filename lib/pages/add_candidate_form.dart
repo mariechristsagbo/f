@@ -22,6 +22,9 @@ class _AddCandidateFormState extends State<AddCandidateForm> {
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     if (image != null) {
       print("Image path: ${image.path}");
+      setState(() {
+        person.image = image.path;
+      });
     }
   }
 
@@ -43,9 +46,9 @@ class _AddCandidateFormState extends State<AddCandidateForm> {
             children: [
 
             GestureDetector(
-            onTap: _pickImage,
-            child: Container(
-              margin: EdgeInsets.only(bottom: 12),
+             onTap: _pickImage,
+              child: Container(
+               margin: EdgeInsets.only(bottom: 12),
               height: 180,
               decoration: BoxDecoration(
                 color: Colors.grey[200],
@@ -55,6 +58,7 @@ class _AddCandidateFormState extends State<AddCandidateForm> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     Icon(Icons.camera, size: 40,),
                     SizedBox(height: 10),
                     Text('Appuyez pour ajouter une image',
